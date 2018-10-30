@@ -6,6 +6,6 @@
 
     <h1>{{ $title }}</h1>
 
-    <p>This is the main page.</p>
+    <p>This is the Book page.</p>
 
 @endsection
