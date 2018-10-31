@@ -11,14 +11,15 @@
         {{-- Title --}}
         <title>@yield('title')</title>
     </head>
-    <body class="container vh-min-100">
+    <body class="container-fluid p-0 vh-min-100">
+        {{-- NavBar --}}
         @include('inc.navbar')
 
-            <div class="row">
-                <div class="col">
-                    @yield('content')
-                </div>
-            </div>
+        {{-- Banner --}}
+        {{-- @yield('banner') --}}
+
+        {{-- Main Content --}}
+        @yield('content')
 
         {{-- Import Scripts --}}
         <script src="js/app.js"></script>

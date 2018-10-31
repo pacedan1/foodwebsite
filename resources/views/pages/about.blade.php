@@ -3,9 +3,10 @@
 @section('title', $title)
 
 @section('content')
-    
-    <h1>{{ $title }}</h1>
+    @component('inc.banner')
+        @slot('size', false)
+        @slot('imgPath', 'images/home-cover.jpg')
 
-    <p>This is the about page.</p>
-
+        <h1 class="font-weight-bold">{{ $title }}</h1>
+    @endcomponent
 @endsection

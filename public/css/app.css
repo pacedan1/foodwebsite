@@ -10475,3 +10475,44 @@ a.text-dark:focus {
   margin-right: 1rem;
 }
 
+.container-banner,
+.container-banner-half {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 90vh;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.container-banner .img-fluid,
+.container-banner-half .img-fluid {
+  position: absolute;
+  z-index: -1;
+}
+
+.container-banner-half {
+  height: 250px;
+}
+
+.container-banner-half .img-fluid {
+  top: 10rem;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+img.center {
+  display: block;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+

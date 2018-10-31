@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md flex-column navbar-light bg-light">
+<nav class="navbar navbar-expand-md flex-column navbar-dark bg-info">
     {{-- Logo --}}
     <a class="navbar-brand mx-4 my-2 m-md-0 py-2" href="#">
         <img class="img-fluid" src="images/navicon.png" alt="This is a Food Website">

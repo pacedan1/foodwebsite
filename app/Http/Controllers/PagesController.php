@@ -12,7 +12,7 @@ class PagesController extends Controller
     }
     public function about()
     {
-        return view('pages.about', ['title' => 'About Page']);
+        return view('pages.about', ['title' => 'About Food Website']);
     }
     public function book()
     {
