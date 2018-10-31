@@ -1,3 +1,6 @@
+<?php $page = Route::current()->uri()?>
+
+
 <nav class="navbar navbar-expand-md flex-column navbar-dark bg-info">
     {{-- Logo --}}
     <a class="navbar-brand mx-4 my-2 m-md-0 py-2" href="#">
@@ -12,17 +15,44 @@
     {{-- Menus --}}
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav">
+            {{-- Home --}}
+            @if ($page == '/')
             <li class="nav-item active">
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            @else
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home </a>
+            @endif
             </li>
+
+            {{-- Recipes --}}
+            @if ($page == 'Recipes')
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Recipes <span class="sr-only">(current)</span></a>
+            @else
             <li class="nav-item">
                 <a class="nav-link" href="#">Recipes</a>
+            @endif
             </li>
+
+            {{-- Book --}}
+            @if ($page == 'book')
+            <li class="nav-item active">
+                <a class="nav-link" href="book">Book <span class="sr-only">(current)</span></a>
+            @else
             <li class="nav-item">
                 <a class="nav-link" href="book">Book</a>
+            @endif
             </li>
+
+            {{-- About --}}
+            @if ($page == 'about')
+            <li class="nav-item active">
+                <a class="nav-link" href="about">About <span class="sr-only">(current)</span></a>
+            @else
             <li class="nav-item">
-                <a class="nav-link disabled" href="about">About</a>
+                <a class="nav-link" href="about">About</a>
+            @endif
             </li>
         </ul>
     </div>
