@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="../css/app.css">
 
         {{-- Title --}}
         <title>@yield('title')</title>
@@ -22,6 +22,6 @@
         @yield('content')
 
         {{-- Import Scripts --}}
-        <script src="js/app.js"></script>
+        <script src="../js/app.js"></script>
     </body>
 </html>
