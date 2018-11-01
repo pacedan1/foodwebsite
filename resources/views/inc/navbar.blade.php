@@ -26,32 +26,32 @@
             </li>
 
             {{-- Recipes --}}
-            @if ($page == 'recipes')
+            @if ( preg_match('/^recipe/', $page))
             <li class="nav-item active">
-                <a class="nav-link" href="recipes">Recipes <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/recipes">Recipes <span class="sr-only">(current)</span></a>
             @else
             <li class="nav-item">
-                <a class="nav-link" href="recipes">Recipes</a>
+                <a class="nav-link" href="/recipes">Recipes</a>
             @endif
             </li>
 
             {{-- Book --}}
             @if ($page == 'book')
             <li class="nav-item active">
-                <a class="nav-link" href="book">Book <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/book">Book <span class="sr-only">(current)</span></a>
             @else
             <li class="nav-item">
-                <a class="nav-link" href="book">Book</a>
+                <a class="nav-link" href="/book">Book</a>
             @endif
             </li>
 
             {{-- About --}}
             @if ($page == 'about')
             <li class="nav-item active">
-                <a class="nav-link" href="about">About <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/about">About <span class="sr-only">(current)</span></a>
             @else
             <li class="nav-item">
-                <a class="nav-link" href="about">About</a>
+                <a class="nav-link" href="/about">About</a>
             @endif
             </li>
         </ul>
