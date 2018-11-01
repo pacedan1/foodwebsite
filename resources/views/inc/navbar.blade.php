@@ -1,5 +1,5 @@
+{{-- Check current URI --}}
 <?php $page = Route::current()->uri()?>
-
 
 <nav class="navbar navbar-expand-md flex-column navbar-dark bg-info">
     {{-- Logo --}}
@@ -26,12 +26,12 @@
             </li>
 
             {{-- Recipes --}}
-            @if ($page == 'Recipes')
+            @if ($page == 'recipes')
             <li class="nav-item active">
-                <a class="nav-link" href="#">Recipes <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="recipes">Recipes <span class="sr-only">(current)</span></a>
             @else
             <li class="nav-item">
-                <a class="nav-link" href="#">Recipes</a>
+                <a class="nav-link" href="recipes">Recipes</a>
             @endif
             </li>
 
