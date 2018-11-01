@@ -3,6 +3,7 @@
 // General Styles
 //
 //
+@import "custom-sizing";
 
 .link-unstyled {
     &,
@@ -26,10 +27,6 @@
         box-shadow: inherit;
         padding: inherit;
     }
-}
-
-.vh-min-100{
-    min-height: 100vh;
 }
 
 img.center{
@@ -94,4 +91,9 @@ img.center{
     width: 120px;
     background: black;
     margin-right: 2rem;
+}
+
+.recipe-image{
+    height: 280px;
+    width: 280px;
 }

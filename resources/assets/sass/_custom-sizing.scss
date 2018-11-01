@@ -1,0 +1,12 @@
+// Personal display styling - Width & Height  
+// 
+//
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        .mw#{$infix}-100   { max-width: 100% !important; }
+        .mh#{$infix}-100  { max-height: 100% !important; }
+        .vh-min#{$infix}-100 { min-height: 100vh !important; }
+    }
+}
