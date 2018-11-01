@@ -13,7 +13,7 @@ class RecipesController extends Controller
      */
     public function index()
     {
-        return view('pages.index', ['title'=>'test']);
+        return view('recipes.index');
     }
 
     /**
