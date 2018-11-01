@@ -48,7 +48,11 @@ class RecipesController extends Controller
      */
     public function show($id)
     {
-        //
+        //get recipe with ID
+        $recipe = Recipe::find($id);
+
+        //return view
+        return view('recipes.show')->with('recipe', $recipe);
     }
 
     /**

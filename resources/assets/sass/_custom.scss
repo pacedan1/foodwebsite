@@ -94,6 +94,14 @@ img.center{
 }
 
 .recipe-image{
-    height: 280px;
-    width: 280px;
+    max-width: 430px;
+    height: auto;
+    // temporary
+    height:430px;
+}
+@include media-breakpoint-up(md){
+    .recipe-image{
+        height: 280px;
+        width: 280px;
+    }
 }
