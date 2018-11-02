@@ -14,7 +14,8 @@ class RecipesController extends Controller
      */
     public function index()
     {
-        $recipes = Recipe::all();
+        // $recipes = Recipe::all();
+        $recipes = Recipe::orderBy('id')->Paginate(15);
 
         return view('recipes.index')->with('recipes', $recipes);
     }

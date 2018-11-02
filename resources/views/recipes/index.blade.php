@@ -5,7 +5,7 @@
 @section('content')
     <div class="container bg-white p-4">
         {{-- check if there are any recipes --}}
-        @if(count($recipes) > 1)
+        @if(count($recipes) > 0)
             {{-- Loop for each Recipe --}}
             @foreach ($recipes as $recipe)
                 <div class="card-recipe flex-row">
@@ -22,6 +22,7 @@
                         </div>
                     </div>
             @endforeach
+            {{$recipes->links()}}
         {{-- if no recipes are found --}}
         @else
             <div class="jumbotron">

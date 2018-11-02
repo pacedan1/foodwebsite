@@ -5,10 +5,10 @@
 @endsection
 
 @section('content')
-    <div class="container-md mw-sm-md-100 bg-white p-md-4">
+    <div class="container mw-sm-md-100 bg-white p-md-4">
         {{-- check if recipe exists --}}
         @if($recipe)
-            <div class="row mx-a p-0 px-md-1 py-md-4 bg-secondary">
+            <div class="row mx-a p-0 pb-3 px-md-1 py-md-4 bg-secondary">
                 <div class="col-md flex-grow-0">
                         <img src="{{--- $recipe->image ---}}" alt="" class="img-fluid recipe-image bg-dark d-block m-auto">
                 </div>
