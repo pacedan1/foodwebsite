@@ -15,6 +15,9 @@
         {{-- NavBar --}}
         @include('inc.navbar')
 
+        {{-- Include errors --}}
+        @include('inc.messages')
+
         {{-- Banner --}}
         {{-- @yield('banner') --}}
 
