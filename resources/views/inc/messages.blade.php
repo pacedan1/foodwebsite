@@ -13,7 +13,7 @@ EOT;
 
 {{-- Errors --}}
 @if(count($errors))
-    @foreach ($errors->all as $error)
+    @foreach ($errors->all() as $error)
         <?= message($error, 'alert-danger'); ?>
     @endforeach
 @endif

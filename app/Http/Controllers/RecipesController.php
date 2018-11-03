@@ -28,6 +28,7 @@ class RecipesController extends Controller
     public function create()
     {
         //
+        return view('recipes.create');
     }
 
     /**
@@ -38,7 +39,20 @@ class RecipesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validate data
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
+        // Create and store recipe in DB
+        $recipe = new Recipe;
+        $recipe->title = $request->input('title');
+        $recipe->body = $request->input('description');
+        $recipe->save();
+
+        // redirect with success message
+        return redirect('/recipes')->with('success', 'Recipe Created Successfully!');
     }
 
     /**
