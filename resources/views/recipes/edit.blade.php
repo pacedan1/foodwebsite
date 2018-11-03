@@ -8,7 +8,7 @@
     <div class="container mw-sm-md-100 bg-white p-md-4">
         {{-- check if recipe exists --}}
         @if($recipe)
-        {!! Form::open(['action' => 'RecipesController@store', 'class' => 'form']) !!}
+        {!! Form::open(['action' => 'RecipesController@update', 'class' => 'form']) !!}
             <div class="form-group row">
                 {{Form::label('title', 'Title', ['class' => 'col-md-2'])}}
                 {{Form::text('title', $recipe->title, ['class' => 'col-md-4 form-control', 'placeholder' => 'Title'])}}
