@@ -8,18 +8,18 @@
         </div>
     </div>
 EOT;
-    }
+    };
 ?>
 
 {{-- Errors --}}
 @if(count($errors))
     @foreach ($errors->all as $error)
-        <?= message($error, 'alert-danger') ?>
+        <?= message($error, 'alert-danger'); ?>
     @endforeach
 @endif
 
 {{-- Success --}}
-@if ($message = session('success'))
+@if (session('success'))
     <?= message(session('success'), 'alert-success'); ?> 
 @endif
 
@@ -37,5 +37,3 @@ EOT;
 @if (session('info'))
     <?= message(session('info'), 'alert-info'); ?> 
 @endif
-
-
