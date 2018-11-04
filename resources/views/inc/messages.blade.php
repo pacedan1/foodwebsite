@@ -30,7 +30,7 @@ EOT;
 
 {{-- Error --}}
 @if (session('error'))
-    <?= message(session('error'), 'alert-error'); ?> 
+    <?= message(session('error'), 'alert-danger'); ?> 
 @endif
 
 {{-- Info --}}
