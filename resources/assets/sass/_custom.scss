@@ -105,3 +105,32 @@ img.center{
         width: 280px;
     }
 }
+.recipe-header{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    padding-bottom: 3*$spacer;
+    position: relative;
+}
+.recipe-options{
+    position: absolute;
+    right:0;
+    top: 0;
+}
+
+.list-ingredient{
+    @extend .list-group;
+    padding: 0 $spacer;
+}
+.list-ingredient-item{
+    @extend .list-group-item;
+    border: 0;
+    border-top: 1px dotted grey;
+    &:first-child{
+        border-top: 0;
+    }
+}
+
+.list-method{
+
+}
