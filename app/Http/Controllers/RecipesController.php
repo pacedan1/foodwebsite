@@ -93,7 +93,17 @@ class RecipesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
+        $recipe = Recipe::find($id);
+        $recipe->title = $request->input('title');
+        $recipe->body = $request->input('description');
+        $recipe->save();
+
+        return redirect("/recipes/$id")->with('success', 'Recipe Updated Successfully!');
     }
 
     /**
@@ -104,6 +114,9 @@ class RecipesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $recipe = Recipe::find($id);
+        $recipe->delete();
+
+        return redirect("/recipes")->with('success', 'Recipe Delete Successfully');
     }
 }

@@ -8,6 +8,11 @@
     <div class="container mw-sm-md-100 bg-white p-md-4">
         {{-- check if recipe exists --}}
         @if($recipe)
+        {!! Form::open(['action' => ['RecipesController@destroy', $recipe->id], 'class' => 'form']) !!}
+            <a href="/recipes/{{$recipe->id}}/edit" class="btn btn-primary">Edit</a>
+            {{ Form::hidden('_method', 'delete') }}
+            {{ Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+        {!! Form::close() !!}
             <div class="row mx-a p-0 pb-3 px-md-1 py-md-4 bg-secondary">
                 <div class="col-md flex-grow-0">
                         <img src="{{--- $recipe->image ---}}" alt="" class="img-fluid recipe-image bg-dark d-block m-auto">
