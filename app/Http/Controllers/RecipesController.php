@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Recipe;
+use App\Exceptions\Handler;
 
 class RecipesController extends Controller
 {
@@ -66,8 +67,14 @@ class RecipesController extends Controller
         //get recipe with ID
         $recipe = Recipe::find($id);
 
-        //return view
-        return view('recipes.show')->with('recipe', $recipe);
+        // if recipe exists return show page else 404 page
+        if($recipe){
+            return view('recipes.show')->with('recipe', $recipe);
+        }
+        else{
+            return view('404');
+        }
+
     }
 
     /**
@@ -78,9 +85,17 @@ class RecipesController extends Controller
      */
     public function edit($id)
     {
+        // get recipe with ID
         $recipe = Recipe::find($id);
 
-        return view('recipes.edit')->with('recipe', $recipe);
+        // if recipe exists return edit page else 404 page
+        if($recipe){
+            return view('recipes.edit')->with('recipe', $recipe);
+        }
+        else{
+            return view('404');
+        }
+
         //
     }
 
